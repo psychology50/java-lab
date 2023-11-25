@@ -1,0 +1,1 @@
+- [Lambda vs Closure](https://jaeseo0519.tistory.com/338)
