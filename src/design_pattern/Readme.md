@@ -1,1 +1,2 @@
 - [Singleton](https://jaeseo0519.tistory.com/337)
+- [Factory](https://jaeseo0519.tistory.com/339)
