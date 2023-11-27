@@ -2,12 +2,12 @@ package design_pattern.factory.Ingredient;
 
 public abstract class Pizza {
     String name;
-    Dough dough;
-    Sauce sauce;
-    Cheese cheese;
-    Veggies veggies[];
-    Pepparoni pepparoni;
-    Clams clams;
+//    Dough dough;
+//    Sauce sauce;
+//    Cheese cheese;
+//    Veggies veggies[];
+//    Pepparoni pepparoni;
+//    Clams clams;
 
     public abstract void prepare();
 

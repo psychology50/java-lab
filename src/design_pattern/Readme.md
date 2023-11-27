@@ -1,2 +1,4 @@
 - [Singleton](https://jaeseo0519.tistory.com/337)
 - [Factory](https://jaeseo0519.tistory.com/339)
+- [Strategy](https://jaeseo0519.tistory.com/340)
+- [Observer](https://jaeseo0519.tistory.com/342)

@@ -1,23 +1,24 @@
 package design_pattern.factory.store;
 
-import design_pattern.factory.pizza.Pizza;
+
+import design_pattern.factory.Ingredient.Pizza;
 
 public class ChicagoPizzaStore extends AbstractPizzaStore {
     @Override
     protected Pizza createPizza(String type) {
-        Pizza pizza;
+        Pizza pizza = null;
         switch (type) {
             case "cheese":
-                pizza = new ChicagoStyleCheesePizza();
+//                pizza = new ChicagoStyleCheesePizza();
                 break;
             case "pepperoni":
-                pizza = new ChicagoStylePepperoniPizza();
+//                pizza = new ChicagoStylePepperoniPizza();
                 break;
             case "clam":
-                pizza = new ChicagoStyleClamPizza();
+//                pizza = new ChicagoStyleClamPizza();
                 break;
             case "veggie":
-                pizza = new ChicagoStyleVeggiePizza();
+//                pizza = new ChicagoStyleVeggiePizza();
                 break;
             default:
                 throw new IllegalArgumentException("No such pizza.");
