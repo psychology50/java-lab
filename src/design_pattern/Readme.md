@@ -3,3 +3,4 @@
 - [Strategy](https://jaeseo0519.tistory.com/340)
 - [Observer](https://jaeseo0519.tistory.com/342)
 - [Proxy](https://jaeseo0519.tistory.com/350)
+- [Iterator](https://jaeseo0519.tistory.com/351)
