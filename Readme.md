@@ -3,6 +3,7 @@
 - [Factory Pattern]()
 - [Strategy Pattern]()
 - [Observer Pattern]()
+- [Proxy Pattern]()
 
 ## 함수형 인터페이스
 - [Lambda vs Closure]()
