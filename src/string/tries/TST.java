@@ -16,6 +16,11 @@ public class TST<V> implements StringST<V> {
     }
 
     @Override
+    public void delete(String key) {
+
+    }
+
+    @Override
     public void put(String key, V val) {
         if (!contains(key)) {
             N++;
@@ -30,8 +35,33 @@ public class TST<V> implements StringST<V> {
     }
 
     @Override
+    public Iterable<String> keys() {
+        return null;
+    }
+
+    @Override
     public boolean contains(String key) {
         return get(key) != null;
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return false;
+    }
+
+    @Override
+    public String longestPrefixOf(String s) {
+        return null;
+    }
+
+    @Override
+    public Iterable<String> keysWithPrefix(String s) {
+        return null;
+    }
+
+    @Override
+    public Iterable<String> keysThatMatch(String s) {
+        return null;
     }
 
     private Node<V> get(Node<V> x, String key, int d) {
