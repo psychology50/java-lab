@@ -87,6 +87,17 @@ public class BinaryStdIn {
         return x;
     }
 
+    public static String readString() {
+        if (isEmpty()) throw new RuntimeException("Reading from empty input stream");
+
+        StringBuilder sb = new StringBuilder();
+        while (!isEmpty()) {
+            sb.append(readChar());
+        }
+
+        return sb.toString();
+    }
+
     private static void fillBuffer() {
         try {
             buffer = in.read();
