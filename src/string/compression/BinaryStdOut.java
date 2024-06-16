@@ -36,6 +36,17 @@ public class BinaryStdOut {
         write((char) x & 0xffff);
     }
 
+    public static void write(int x, int R) {
+        if (R <= 1 || R >= 256) throw new IllegalArgumentException("Illegal value of R");
+        if (x < 0 || x >= R) throw new IllegalArgumentException("Illegal " + R + "-bit char = " + x);
+
+        int logR = 32 - Integer.numberOfLeadingZeros(R); // R의 비트 수
+        for (int i = 0; i < logR; i++) {
+            boolean bit = ((x >> (logR - i - 1)) & 1) == 1;
+            writeBit(bit);
+        }
+    }
+
     public static void write(long x) {
         for (int i = 0; i < 8; i++) {
             write((char) (x & 0xff));
