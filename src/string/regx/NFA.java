@@ -91,8 +91,12 @@ public class NFA {
     }
 }
 
+/**
+ * DirectedDfs 클래스는 유향 그래프에서 깊이 우선 탐색을 수행하는 클래스이다.
+ * 생성자에서 유향 그래프 G와 시작 정점 s를 입력으로 받아 깊이 우선 탐색을 수행한다.
+ */
 class DirectedDfs {
-    private boolean[] marked;
+    private final boolean[] marked;
 
     public DirectedDfs(Digraph G, int s) {
         marked = new boolean[G.V()];
@@ -122,17 +126,22 @@ class DirectedDfs {
     }
 }
 
+/**
+ * Digraph 클래스는 유향 그래프를 나타내는 클래스이다.
+ * 생성자에서 정점의 개수 V를 입력으로 받아 인접 리스트를 초기화한다.
+ * 정점의 개수 V와 간선의 개수 E, 인접 리스트 adj를 저장한다.
+ */
 class Digraph {
     private final int V; // 정점의 개수
     private int E; // 간선의 개수
-    private List<Integer>[] adj; // 인접 리스트
+    private final List<List<Integer>> adj; // 인접 리스트
 
     public Digraph(int V) {
         this.V = V;
         this.E = 0;
-        adj = new List[V];
+        adj = new LinkedList<>();
         for (int v=0; v<V; ++v) {
-            adj[v] = new LinkedList<>();
+            adj.add(new LinkedList<>());
         }
     }
 
@@ -145,11 +154,11 @@ class Digraph {
     }
 
     public void addEdge(int v, int w) {
-        adj[v].add(w);
+        adj.get(v).add(w);
         E++;
     }
 
     public Iterable<Integer> adj(int v) {
-        return adj[v];
+        return adj.get(v);
     }
 }
